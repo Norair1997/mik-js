@@ -250,6 +250,8 @@ selector can be a Node|String|Array
 ### mik.update(selector, config, children)
 
 ```Javascript
+selector can be a Node|String|Array
+// look above for more details
 
 config and children
 the same like above mik.create
