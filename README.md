@@ -211,7 +211,7 @@ if set to true => remove events
 ```Javascript
 type must be String
 
-// examples
+// examples for type:
 "input" or "button" or "script" or "img" or "div" or "span"
 
 config is a object with key:value
