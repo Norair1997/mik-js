@@ -245,6 +245,7 @@ children is like the selector from mik.on(selector, ...);
 
 selector can be a Node|String|Array
 // see above for more details
+<<<<<<< HEAD
 
 ```
 ### mik.update(selector, config, children)
@@ -275,3 +276,6 @@ this returns
 
 
 ```
+=======
+```
+>>>>>>> 1babb91a23f85a4ea78928cc47bb2ca993723c68
