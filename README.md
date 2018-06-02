@@ -16,7 +16,7 @@ Just bind it in the 'head' or generally before you wanna use it
 
 ## How to use it
 
-### mik.on() - Binding multiple events to multiple elements
+### mik.on(selector, events, removeBoolean) - Binding multiple events to multiple elements
 ```Javascript
 // bind to the element with the id "foo" a click function
 mik.on("#foo", {click: doSomething});
@@ -36,7 +36,7 @@ mik.on([".todo", "#addBtn", document.body], {
 	touchstart: callThisFunction
 });
 
-// now we want to remove some events ...
+// now we want to REMOVE some events ...
 mik.on([document.body, "#addBtn"], {
 	click: someHandler
 }, true); // <--- if the 3. parameter is true, then it removes the events
@@ -54,7 +54,7 @@ mik.on(".inputField", {
 });
 
 ```
-### mik.create() - Creating HTML Elements in a new easy way
+### mik.create(type, config, children) - Creating HTML Elements in a new easy way
 ```Javascript
 
 // We create a div with an id, classes, data attribute, append it to document body
@@ -98,7 +98,7 @@ var paragraphContainer = mik.create("div", {
 // no problem -> mik.update() is the solution
 
 ```
-### mik.update() - Updating HTML Elements in a new easy way
+### mik.update(selector, config, children) - Updating HTML Elements in a new easy way
 ```Javascript
 // We want to update our elements
 mik.update("#p-container", {
@@ -136,7 +136,7 @@ window.setTimeout(function() {
 }, 3000);
 
 ```
-### mik.select() - Selecting Elements
+### mik.select(selector) - Selecting Elements
 
 ```Javascript
 
@@ -152,7 +152,7 @@ var someContainer = mik.select(["#content .someDiv", "#specialDiv"]);
 ```
 
 
-### mik.request() - Making requests 
+### mik.request(url, config) - Making requests 
 
 ```Javascript
 
@@ -256,9 +256,11 @@ selector can be a Node|String|Array
 config and children
 the same like above mik.create
 
+this returns the elements selected with the selector in an array!
+
 ```
 
-### mik.select() - Selecting Elements
+### mik.select(selector) - Selecting Elements
 ```Javascript
 selector can be a Node|String|Array
 
@@ -271,7 +273,6 @@ document.body or myDiv or document.links[0] or document.links
 // example for Array: 
 [document.body, "#someDiv", ".inputFields div.p"]
 
-this returns 
-
+this returns an array from the selected elements
 
 ```
