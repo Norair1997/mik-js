@@ -85,9 +85,8 @@ var mik = {
 	},
 
 	update: function(selector, config, children) {
-		if (children == undefined) children = [];
-		var selectedElements = mik.select(selector), childArray = [];
-		if (!Array.isArray(children)) childArray.push(children); else childArray = children;	
+		if (children === undefined) children = [];
+		var selectedElements = mik.select(selector), children = mik.select(children);
 		for (var i = 0, len = selectedElements.length; i < len; i++) {
 			var element = selectedElements[i];
 			for (var property in config) {
@@ -110,8 +109,8 @@ var mik = {
 			        }
 				}
 			}
-			for (var j = 0, lenA = childArray.length; j < lenA; j++) {
-				element.appendChild(childArray[j]);
+			for (var j = 0, lenA = children.length; j < lenA; j++) {
+				element.appendChild(children[j]);
 			}
 		}
 		if (len === 1) return selectedElements[0]; else selectedElements;

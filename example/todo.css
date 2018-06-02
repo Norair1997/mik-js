@@ -67,7 +67,7 @@ button:hover {
 	padding: 1rem;
 	margin: 0;
 	background-color: #eee;
-	transition: 0.1s box-shadow;
+	transition: 0.2s box-shadow;
 	will-change: box-shadow;
 }
 

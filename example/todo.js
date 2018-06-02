@@ -109,7 +109,7 @@ function someHandler(e) {
 
 	var myParagraph = e.target;
 	mik.update(myParagraph, {
-		style: "box-shadow: inset "+(e.clientX- myParagraph.offsetLeft)+"px 0 0 #cc5;"
+		style: "box-shadow: inset "+(e.clientX- myParagraph.offsetLeft)+"px 0 0.01px #cc5;"
 	})
 }
 
