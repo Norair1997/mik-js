@@ -208,6 +208,7 @@ if set to true => remove events
 ```
 ### mik.create(type, config, children)
 
+```Javascript
 type must be String
 
 // examples
@@ -244,3 +245,5 @@ children is like the selector from mik.on(selector, ...);
 
 selector can be a Node|String|Array
 // see above for more details
+
+```
