@@ -245,5 +245,4 @@ children is like the selector from mik.on(selector, ...);
 
 selector can be a Node|String|Array
 // see above for more details
-
 ```
