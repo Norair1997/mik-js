@@ -247,3 +247,29 @@ selector can be a Node|String|Array
 // see above for more details
 
 ```
+### mik.update(selector, config, children)
+
+```Javascript
+
+config and children
+the same like above mik.create
+
+```
+
+### mik.select() - Selecting Elements
+```Javascript
+selector can be a Node|String|Array
+
+// example for Node: 
+document.body or myDiv or document.links[0] or document.links
+
+// example for String: 
+"#someDiv" or ".inputFields div.p" or "form input"
+
+// example for Array: 
+[document.body, "#someDiv", ".inputFields div.p"]
+
+this returns 
+
+
+```
