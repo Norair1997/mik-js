@@ -56,9 +56,7 @@ var mik = {
 			var elem = selector[e];
 			if (typeof elem === "string") {
 				if (elem.charAt(0) == "#") {
-					elem = elem.slice(1);
-					elem = mik.d.getElementById(elem);
-					selectedElements.push(elem);
+					selectedElements.push(mik.d.getElementById(elem.slice(1)));
 				} else if (elem.charAt(0) == ".") {
 					loopPush(mik.d.getElementsByClassName(elem.slice(1)));
 				} else {
