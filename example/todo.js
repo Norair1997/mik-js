@@ -52,7 +52,7 @@ function init() {
 	// ----------------- mik.request/mik.update/mik.on EXAMPLES --------------- //
 
 
-	mik.request("http://localhost/testValues.php", {
+	mik.request("https://www.norair.at/testValues.php", {
 		method: "GET",
 		onSuccess: buildView,
 		onError: (e) => {console.log("Something bad happened")}

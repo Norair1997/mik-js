@@ -1,5 +1,5 @@
 var mik = {
-	ver: "0.1.0",
+	ver: "0.1.1",
 	d: document,
 	on: function(selector, config, remove) {
 		if (remove === null) remove = false;
@@ -54,21 +54,20 @@ var mik = {
 		var len = selector.length - 1;
 		for (var e = 0; e <= len; e++) {
 			var elem = selector[e];
-			if (elem instanceof HTMLElement || elem instanceof HTMLDocument) {
+			if (typeof elem === "string") {
+				if (elem.charAt(0) == "#") {
+					elem = elem.slice(1);
+					elem = mik.d.getElementById(elem);
+					selectedElements.push(elem);
+				} else if (elem.charAt(0) == ".") {
+					loopPush(mik.d.getElementsByClassName(elem.slice(1)));
+				} else {
+					loopPush(mik.d.querySelectorAll(elem));
+				}
+			} else if (elem instanceof HTMLElement || elem instanceof HTMLDocument) {
 				selectedElements.push(elem);
 			} else if (elem instanceof HTMLCollection) {
 				loopPush(elem);
-			} else if (elem.charAt(0) == "#") {
-				elem = elem.slice(1);
-				elem = mik.d.getElementById(elem);
-				selectedElements.push(elem);
-			} else if (elem.charAt(0) == ".") {
-				elem = elem.slice(1);
-				var elements = mik.d.getElementsByClassName(elem);
-				loopPush(elements);
-			} else if (typeof elem === "string") {
-				var elements = mik.d.querySelectorAll(elem);
-				loopPush(elements);
 			}
 		}
 
