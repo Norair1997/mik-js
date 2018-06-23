@@ -1,6 +1,6 @@
-# mik-js v0.1.0
+# mik-js v0.1.1
 
-A lightweight (~1.66KB) easy to use Javascript Library to build fast web applications 
+A lightweight (~1.64KB) easy to use Javascript Library to build fast web applications 
 
 Support: (IE 10+, Firefox 3.6+, Chrome 8+, Safari 5.1+, Opera 12.1+)
 

@@ -4,6 +4,7 @@ var mik = {
 	on: function(selector, config, remove) {
 		if (remove === null) remove = false;
 		var selectedElements = mik.select(selector);
+
 		for (var i = 0, len = selectedElements.length; i < len; i++) {
 			for (var property in config) {
 		    	if (config.hasOwnProperty(property) && !remove) {
@@ -55,9 +56,9 @@ var mik = {
 		for (var e = 0; e <= len; e++) {
 			var elem = selector[e];
 			if (typeof elem === "string") {
-				if (elem.charAt(0) == "#") {
+				if (elem.charAt(0) == "#" && elem.split(" ").length == 1) {
 					selectedElements.push(mik.d.getElementById(elem.slice(1)));
-				} else if (elem.charAt(0) == ".") {
+				} else if (elem.charAt(0) == "." && elem.split(" ").length == 1) {
 					loopPush(mik.d.getElementsByClassName(elem.slice(1)));
 				} else {
 					loopPush(mik.d.querySelectorAll(elem));
