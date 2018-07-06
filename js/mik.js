@@ -63,7 +63,7 @@ var mik = {
 				} else {
 					loopPush(mik.d.querySelectorAll(elem));
 				}
-			} else if (elem instanceof HTMLElement || elem instanceof HTMLDocument) {
+			} else if (elem instanceof HTMLElement || elem instanceof HTMLDocument || elem instanceof window.constructor) {
 				selectedElements.push(elem);
 			} else if (elem instanceof HTMLCollection) {
 				loopPush(elem);
